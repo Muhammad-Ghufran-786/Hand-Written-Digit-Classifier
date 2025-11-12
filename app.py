@@ -2,6 +2,10 @@ import streamlit as st
 import numpy as np
 from keras.datasets import mnist
 from PIL import Image, ImageOps
+import streamlit as st
+
+st.title("Hello, Streamlit!")
+st.write("If this works, the problem is in your app code.")
 
 # Load model
 model = load_model("digit_model.h5")
@@ -28,5 +32,6 @@ if uploaded_file is not None:
 
     st.subheader(f"✅ Predicted Digit: {predicted_digit}")
     st.bar_chart(prediction[0])
+
 
 
