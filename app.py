@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from tensorflow import load_model
+from keras.datasets import mnist
 from PIL import Image, ImageOps
 
 # Load model
@@ -28,4 +28,5 @@ if uploaded_file is not None:
 
     st.subheader(f"✅ Predicted Digit: {predicted_digit}")
     st.bar_chart(prediction[0])
+
 
