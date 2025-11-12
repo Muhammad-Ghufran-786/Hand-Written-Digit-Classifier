@@ -1,8 +1,8 @@
 import tensorflow as tf
-from tensorflow.keras.datasets import mnist
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Flatten
-from tensorflow.keras.utils import to_categorical
+from tensorflow import mnist
+from tensorflow import Sequential
+from tensorflow import Dense, Flatten
+from tensorflow import to_categorical
 
 # Load and preprocess data
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -22,3 +22,4 @@ model.fit(x_train, to_categorical(y_train), epochs=5, validation_data=(x_test, t
 # Save the model
 model.save("digit_model.h5")
 print("✅ Model saved as digit_model.h5")
+
