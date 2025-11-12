@@ -2,11 +2,6 @@ from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Flatten
 from keras.utils import to_categorical
-import streamlit as st
-
-st.title("Hello, Streamlit!")
-st.write("If this works, the problem is in your app code.")
-
 
 # Load and preprocess MNIST data
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
